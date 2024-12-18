@@ -1,48 +1,47 @@
-# Astro Starter Kit: Basics
+# Frontend Mentor - Space tourism website solution
 
-```sh
-npm create astro@latest -- --template basics
-```
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Run `npm istall` then `npm run dev` to run.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Table of contents
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-## 🚀 Project Structure
+## Overview
 
-Inside of your Astro project, you'll see the following folders and files:
+### The challenge
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Users should be able to:
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-## 🧞 Commands
+### Screenshot
 
-All commands are run from the root of the project, from a terminal:
+![](./screenshot.jpg)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Links
 
-## 👀 Want to learn more?
+- Solution URL: [Github Repo](https://github.com/sophia-banou/space-tourism)
+- Live Site URL: [Github Pages](https://sophia-banou.github.io/space-tourism/)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## My process
+
+### Built with
+
+- Astro
+- HTML
+- CSS
+- JQuery
+
+## Author
+
+- Frontend Mentor - [sophia-banou](https://www.frontendmentor.io/profile/sophia-banou)
