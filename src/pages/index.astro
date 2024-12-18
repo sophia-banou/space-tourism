@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout backgroundImage="home/background-home">
+  <main class="home__main">
+    <div class="inner-wrapper">
+      <div class="hero">
+        <div class="info">
+          <h5 class="text-preset-5" style="color: var(--blue-300)">
+            So, you want to travel to
+          </h5>
+          <h1 class="text-preset-1" style="color: var(--white)">SPACE</h1>
+          <p class="text-preset-9" style="color: var(--blue-300)">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+        <div class="button">
+          <a href="/destinations/moon" class="explore" data-astro-prefetch>
+            <span class="text-preset-4" style="color: var(--blue-900)"
+              >EXPLORE</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

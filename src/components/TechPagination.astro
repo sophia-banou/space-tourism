@@ -1,0 +1,24 @@
+---
+const path = Astro.url.pathname;
+---
+
+<nav class="pagination">
+  <a
+    href=`${path.endsWith("launch-vehicle") ? "#" : "/technology/launch-vehicle"}`
+    class=`pag-circle ${path.endsWith("launch-vehicle") ? "active" : ""}`
+  >
+    <p class="text-preset-4">1</p>
+  </a>
+  <a
+    href=`${path.endsWith("spaceport") ? "#" : "/technology/spaceport"}`
+    class=`pag-circle ${path.endsWith("spaceport") ? "active" : ""}`
+  >
+    <p class="text-preset-4">2</p>
+  </a>
+  <a
+    href=`${path.endsWith("space-capsule") ? "#" : "/technology/space-capsule"}`
+    class=`pag-circle ${path.endsWith("space-capsule") ? "active" : ""}`
+  >
+    <p class="text-preset-4">3</p>
+  </a>
+</nav>

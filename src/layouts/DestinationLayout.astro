@@ -1,0 +1,71 @@
+---
+import Layout from "./Layout.astro";
+import destinations from "../data/destinations.json";
+import DestinationNav from "../components/DestinationNav.astro";
+const { id } = Astro.params;
+const destination = destinations.find((d) => d.id === id);
+
+if (!destination) {
+  throw new Error(`Destination not found: ${id}`);
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <Layout backgroundImage="destination/background-destination">
+    <main class="destination__main">
+      <div class="destination__inner">
+        <div class="destination__title">
+          <p
+            class="text-preset-5-bold"
+            style="color: var(--white); opacity: 0.25;"
+          >
+            01
+          </p>
+          <p class="text-preset-5" style="color: var(--white); ">
+            PICK YOUR DESTINATION
+          </p>
+        </div>
+        <div class="destination__content">
+          <div class="content__image">
+            <picture class="image">
+              <img src={destination.image.url} alt={destination.image.alt} />
+            </picture>
+          </div>
+          <div class="destination__explanation">
+            <div class="explanation">
+              <DestinationNav />
+              <div class="explanation__text">
+                <h1 class="text-preset-2" style="color: var(--white);">
+                  {destination.name}
+                </h1>
+                <p class="text-preset-9" style="color: var(--blue-300);">
+                  {destination.description}
+                </p>
+              </div>
+              <div class="explanation__line"></div>
+              <div class="explanation__stats">
+                <div class="distance">
+                  <p class="text-preset-7" style="color: var(--blue-300);">
+                    AVG. DISTANCE
+                  </p>
+                  <p class="text-preset-6" style="color: var(--white);">
+                    {destination.avg_distance}
+                  </p>
+                </div>
+                <div class="travel-time">
+                  <p class="text-preset-7" style="color: var(--blue-300);">
+                    EST. TRAVEL TIME
+                  </p>
+                  <p class="text-preset-6" style="color: var(--white);">
+                    {destination.est_travel_time}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Layout>
+</html>

@@ -1,0 +1,52 @@
+---
+const path = Astro.url.pathname;
+---
+
+<div class="mobile-wrapper">
+  <div class="mobile__nav">
+    <div class="content">
+      <div class="close" id="mobile-close">
+        <img src="../assets/shared/icon-close.svg" alt="Close" />
+      </div>
+    </div>
+  </div>
+  <nav class="mobile__content">
+    <a
+      href=`${path=="/" ? "#" : "/"}`
+      class=`item ${path=="/" ? "active" : ""}`
+    >
+      <div class="text">
+        <span class="text-preset-8-bold">00</span>
+        <p class="text-preset-8">HOME</p>
+      </div>
+    </a>
+    <a
+      href=`${path.startsWith("/destinations") ? "#" : "/destinations/moon"}`
+      class=`item ${path.startsWith("/destinations") ? "active" : ""}`
+    >
+      <div class="text">
+        <span class="text-preset-8-bold">01</span>
+        <p class="text-preset-8">DESTINATION</p>
+      </div>
+    </a>
+    <a
+      href=`${path.startsWith("/crew") ? "#" : "/crew/commander"}`
+      class=`item ${path.startsWith("/crew") ? "active" : ""}`
+    >
+      <div class="text">
+        <span class="text-preset-8-bold">02</span>
+        <p class="text-preset-8">CREW</p>
+      </div>
+    </a>
+    <a
+      href=`${path.startsWith("/technology") ? "#" : "/technology/launch-vehicle"}`
+      class=`item ${path.startsWith("/technology") ? "active" : ""}`
+    >
+      <div class="text">
+        <span class="text-preset-8-bold">03</span>
+        <p class="text-preset-8">TECHNOLOGY</p>
+      </div>
+    </a>
+  </nav>
+</div>
+<div class="mobile__backdrop"></div>

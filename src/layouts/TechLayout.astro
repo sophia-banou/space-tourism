@@ -1,0 +1,67 @@
+---
+import Layout from "./Layout.astro";
+import technologies from "../data/technologies.json";
+import TechPagination from "../components/TechPagination.astro";
+const { id } = Astro.params;
+const technology = technologies.find((t) => t.id === id);
+
+if (!technology) {
+  throw new Error(`Technology not found: ${id}`);
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <Layout backgroundImage="technology/background-technology">
+    <main class="technology__main">
+      <div class="technology__inner">
+        <div class="technology__title">
+          <p
+            class="text-preset-5-bold"
+            style="color: var(--white); opacity: 0.25;"
+          >
+            03
+          </p>
+          <p class="text-preset-5" style="color: var(--white); ">
+            SPACE LAUNCH 101
+          </p>
+        </div>
+        <div class="technology__content">
+          <div class="pag-expl">
+            <TechPagination />
+            <div class="explanation">
+              <div class="rank-name">
+                <p class="text-preset-4" style="opacity: 50.42%;">
+                  THE TERMINOLOGY...
+                </p>
+                <h1 class="text-preset-3">{technology.name}</h1>
+              </div>
+              <p
+                class="text-preset-9 description"
+                style="color: var(--blue-300);"
+              >
+                {technology.explanation}
+              </p>
+            </div>
+          </div>
+          <div class="tec__image">
+            <picture class="image">
+              <source
+                srcset={technology.image.url_portrait}
+                media="(min-width: 1025px)"
+              />
+              <source
+                srcset={technology.image.url_landscape}
+                media="(max-width: 1025px)"
+              />
+              <img
+                src={technology.image.url_portrait}
+                alt={technology.image.alt}
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Layout>
+</html>

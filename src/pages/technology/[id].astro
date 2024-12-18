@@ -1,0 +1,15 @@
+---
+import TechLayout from "../../layouts/TechLayout.astro";
+
+const { id } = Astro.params;
+
+export async function getStaticPaths() {
+  return [
+    { params: { id: "launch-vehicle" } },
+    { params: { id: "spaceport" } },
+    { params: { id: "space-capsule" } },
+  ];
+}
+---
+
+<TechLayout id={id} />

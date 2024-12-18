@@ -1,0 +1,16 @@
+---
+import DestinationLayout from "../../layouts/DestinationLayout.astro";
+
+const { id } = Astro.params;
+
+export async function getStaticPaths() {
+  return [
+    { params: { id: "moon" } },
+    { params: { id: "mars" } },
+    { params: { id: "europa" } },
+    { params: { id: "titan" } },
+  ];
+}
+---
+
+<DestinationLayout id={id} />

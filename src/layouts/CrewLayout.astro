@@ -1,0 +1,60 @@
+---
+import Layout from "./Layout.astro";
+import crew from "../data/crew.json";
+import CrewPagination from "../components/CrewPagination.astro";
+const { id } = Astro.params;
+const crewMember = crew.find((c) => c.id === id);
+
+if (!crewMember) {
+  throw new Error(`Crew member not found: ${id}`);
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <Layout backgroundImage="crew/background-crew">
+    <main class="crew__main">
+      <div class="crew__inner">
+        <div class="crew__title">
+          <p
+            class="text-preset-5-bold"
+            style="color: var(--white); opacity: 0.25;"
+          >
+            02
+          </p>
+          <p class="text-preset-5" style="color: var(--white); ">
+            MEET YOUR CREW
+          </p>
+        </div>
+        <div class="crew__content">
+          <div class="crew__explanation">
+            <div class="explanation">
+              <div class="explanation__inner">
+                <div class="rank-name">
+                  <p class="text-preset-4" style="opacity: 50.42%;">
+                    {crewMember.title}
+                  </p>
+                  <h3 class="text-preset-3">
+                    {crewMember.name}
+                  </h3>
+                </div>
+                <p
+                  class="text-preset-9 crew__info"
+                  style="color: var(--blue-300);"
+                >
+                  {crewMember.info}
+                </p>
+              </div>
+              <CrewPagination />
+            </div>
+          </div>
+          <div class="crew__image">
+            <picture class="image">
+              <img src={crewMember.image.url} alt={crewMember.image.alt} />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Layout>
+</html>

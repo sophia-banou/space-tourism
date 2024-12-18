@@ -1,0 +1,16 @@
+---
+import CrewLayout from "../../layouts/CrewLayout.astro";
+
+const { id } = Astro.params;
+
+export async function getStaticPaths() {
+  return [
+    { params: { id: "commander" } },
+    { params: { id: "mission-specialist" } },
+    { params: { id: "pilot" } },
+    { params: { id: "flight-engineer" } },
+  ];
+}
+---
+
+<CrewLayout id={id} />

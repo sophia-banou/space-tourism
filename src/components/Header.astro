@@ -1,0 +1,57 @@
+---
+const path = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="header__logo">
+    <a href=`${(path == "/") ? "#" : "/"}` data-astro-prefetch>
+      <img class="image" src="../assets/shared/logo.svg" alt="Logo" />
+    </a>
+    <div class="line"></div>
+  </div>
+  <nav class="header__nav">
+    <a
+      href=`${(path == "/") ? "#" : "/"}`
+      data-astro-prefetch
+      class=`item ${(path == "/") ? "active" : ""}`
+    >
+      <div class="text">
+        <span class="text-preset-8-bold">00</span>
+        <p class="text-preset-8">HOME</p>
+      </div>
+    </a>
+    <a
+      href=`${(path.startsWith("/destinations")) ? "#" : "/destinations/moon"}`
+      data-astro-prefetch
+      class=`item ${path.startsWith("/destinations") ? "active" : ""}`
+    >
+      <div class="text">
+        <span class="text-preset-8-bold">01</span>
+        <p class="text-preset-8">DESTINATION</p>
+      </div>
+    </a>
+    <a
+      href=`${(path.startsWith("/crew")) ? "#" : "/crew/commander"}`
+      data-astro-prefetch
+      class=`item ${path.startsWith("/crew") ? "active" : ""}`
+    >
+      <div class="text">
+        <span class="text-preset-8-bold">02</span>
+        <p class="text-preset-8">CREW</p>
+      </div>
+    </a>
+    <a
+      href=`${(path.startsWith("/technology")) ? "#" : "/technology/launch-vehicle"}`
+      data-astro-prefetch
+      class=`item ${path.startsWith("/technology") ? "active" : ""}`
+    >
+      <div class="text">
+        <span class="text-preset-8-bold">03</span>
+        <p class="text-preset-8">TECHNOLOGY</p>
+      </div>
+    </a>
+  </nav>
+  <div class="header__mobile">
+    <img src="../assets/shared/icon-hamburger.svg" alt="Hamburger Menu" />
+  </div>
+</header>
