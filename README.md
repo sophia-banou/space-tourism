@@ -1,8 +1,12 @@
-# Frontend Mentor - Space tourism website solution
+# Frontend Mentor - Space tourism website solution using Astro
 
 This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
-Run `npm istall` then `npm run dev` to run.
+Run:
+
+- `npm istall`
+- `npm run build`
+- `npm run dev`
 
 ## Table of contents
 
