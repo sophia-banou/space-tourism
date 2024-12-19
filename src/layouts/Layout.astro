@@ -11,10 +11,14 @@ const { backgroundImage } = Astro.props;
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/styles-tablet.css" />
-    <link rel="stylesheet" href="../styles/styles-mobile.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/space-tourism/assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/space-tourism/styles/styles.css" />
+    <link rel="stylesheet" href="/space-tourism/styles/styles-tablet.css" />
+    <link rel="stylesheet" href="/space-tourism/styles/styles-mobile.css" />
 
     <!-- bellefair -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,23 +53,26 @@ const { backgroundImage } = Astro.props;
       <slot />
       <picture class="background">
         <source
-          srcset=`../assets/${backgroundImage}-desktop.jpg`
+          srcset=`/space-tourism/assets/${backgroundImage}-desktop.jpg`
           media="(min-width: 1025px)"
         />
         <source
-          srcset=`../assets/${backgroundImage}-tablet.jpg`
+          srcset=`/space-tourism/assets/${backgroundImage}-tablet.jpg`
           media="(max-width: 1024px)"
         />
         <source
-          srcset=`../assets/${backgroundImage}-mobile.jpg`
+          srcset=`/space-tourism/assets/${backgroundImage}-mobile.jpg`
           media="(max-width: 375px)"
         />
-        <img src=`../assets/${backgroundImage}-desktop.jpg` alt="Background" />
+        <img
+          src=`/space-tourism/assets/${backgroundImage}-desktop.jpg`
+          alt="Background"
+        />
       </picture>
     </div>
     <MobileMenu />
     <script>
-      import "../scripts/scripts.js";
+      import "/space-tourism/scripts/scripts.js";
     </script>
   </body>
 </html>

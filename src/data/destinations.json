@@ -6,7 +6,7 @@
     "avg_distance": "384,400 km",
     "est_travel_time": "3 Days",
     "image": {
-      "url": "../assets/destination/image-moon.png",
+      "url": "/space-tourism/assets/destination/image-moon.png",
       "alt": "Moon"
     }
   },
@@ -17,7 +17,7 @@
     "avg_distance": "225 mil. km",
     "est_travel_time": "9 Months",
     "image": {
-      "url": "../assets/destination/image-mars.png",
+      "url": "/space-tourism/assets/destination/image-mars.png",
       "alt": "Mars"
     }
   },
@@ -28,7 +28,7 @@
     "avg_distance": "628 mil. km",
     "est_travel_time": "3 Years",
     "image": {
-      "url": "../assets/destination/image-europa.png",
+      "url": "/space-tourism/assets/destination/image-europa.png",
       "alt": "Europa"
     }
   },
@@ -39,7 +39,7 @@
     "avg_distance": "1.6 bil. km",
     "est_travel_time": "7 Years",
     "image": {
-      "url": "../assets/destination/image-titan.png",
+      "url": "/space-tourism/assets/destination/image-titan.png",
       "alt": "Titan"
     }
   }
