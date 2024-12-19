@@ -18,6 +18,12 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: npm install
+      - name: Install Astro CLI
+        run: npm install -g astro
+      - name: Build the Project
+        run: astro build
       - name: Install, build, and upload your site
         uses: withastro/action@v3
 
