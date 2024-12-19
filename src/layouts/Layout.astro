@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import MobileMenu from "../components/MobileMenu.astro";
 const { backgroundImage } = Astro.props;
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <!doctype html>
@@ -14,7 +15,7 @@ const { backgroundImage } = Astro.props;
     <link
       rel="icon"
       type="image/png"
-      href="/space-tourism/assets/favicon-32x32.png"
+      href=`${basePath}assets/favicon-32x32.png`
     />
     <link rel="stylesheet" href="/space-tourism/styles/styles.css" />
     <link rel="stylesheet" href="/space-tourism/styles/styles-tablet.css" />
@@ -53,19 +54,19 @@ const { backgroundImage } = Astro.props;
       <slot />
       <picture class="background">
         <source
-          srcset=`/space-tourism/assets/${backgroundImage}-desktop.jpg`
+          srcset=`${basePath}assets/${backgroundImage}-desktop.jpg`
           media="(min-width: 1025px)"
         />
         <source
-          srcset=`/space-tourism/assets/${backgroundImage}-tablet.jpg`
+          srcset=`${basePath}/space-tourism/assets/${backgroundImage}-tablet.jpg`
           media="(max-width: 1024px)"
         />
         <source
-          srcset=`/space-tourism/assets/${backgroundImage}-mobile.jpg`
+          srcset=`${basePath}/space-tourism/assets/${backgroundImage}-mobile.jpg`
           media="(max-width: 375px)"
         />
         <img
-          src=`/space-tourism/assets/${backgroundImage}-desktop.jpg`
+          src=`${basePath}/space-tourism/assets/${backgroundImage}-desktop.jpg`
           alt="Background"
         />
       </picture>

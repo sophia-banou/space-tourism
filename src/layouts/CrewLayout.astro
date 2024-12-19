@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import crew from "../data/crew.json";
+const basePath = import.meta.env.BASE_URL || "/";
 import CrewPagination from "../components/CrewPagination.astro";
 const { id } = Astro.params;
 const crewMember = crew.find((c) => c.id === id);
@@ -50,7 +51,10 @@ if (!crewMember) {
           </div>
           <div class="crew__image">
             <picture class="image">
-              <img src={crewMember.image.url} alt={crewMember.image.alt} />
+              <img
+                src={`${basePath}${crewMember.image.url}`}
+                alt={crewMember.image.alt}
+              />
             </picture>
           </div>
         </div>
