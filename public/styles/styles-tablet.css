@@ -1,0 +1,311 @@
+@media only screen and (max-width: 768px) {
+    .inner-wrapper {
+        height: 87.5vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .inner-wrapper {
+        height: 65vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    header {
+        padding-top: 0px;
+    }
+
+    .header__logo {
+        padding-left: var(--sp-500);
+        width: 20.8vw;
+    }
+
+    .header__logo .line {
+        display: none;
+    }
+
+    .header__nav {
+        width: 83.3vw;
+        gap: var(--sp-600);
+        padding: 0rem var(--sp-500);
+        margin-left: 0px;
+    }
+
+    .header__nav .text span {
+        display: none;
+    }
+
+    .home__main {
+        padding: var(--sp-1600) var(--sp-500);
+        height: max-content;
+    }
+
+    .inner-wrapper {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .home__main .hero {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 87.5vw;
+    }
+
+    .hero .info {
+        width: 66.6vw;
+        text-align: center;
+        align-items: center;
+        height: max-content;
+    }
+
+    .hero .info p {
+        font-size: 1.6rem;
+    }
+
+    .hero .button {
+        width: 66.6vw;
+        align-items: center;
+    }
+
+    /* destinations */
+    .destination__main {
+        padding: var(--sp-500) var(--sp-500);
+    }
+
+    .destination__inner {
+        min-height: 110.4vw;
+        width: 100%;
+    }
+
+    .destination__title p {
+        font-size: 2rem;
+    }
+
+    .destination__content {
+        flex-direction: column;
+        min-height: 110.4vw;
+    }
+
+    .destination__content .content__image {
+        width: 100%;
+        height: 50vw;
+        min-height: 50vw;
+    }
+
+    .destination__content .content__image .image {
+        width: 39vw;
+        height: 39vw;
+    }
+
+    .destination__explanation {
+        width: 100%;
+    }
+
+    .destination__explanation .explanation {
+        width: 66.9vw;
+        gap: var(--sp-300);
+
+    }
+
+    .destination__explanation .explanation__nav {
+        justify-content: center;
+    }
+
+    .destination__explanation .explanation__text {
+        text-align: center;
+    }
+
+    .destination__explanation .explanation__text h1 {
+        width: 100%;
+        font-size: 8rem;
+    }
+
+    .destination__explanation .explanation__text p {
+        font-size: 1.6rem;
+    }
+
+    .explanation__stats .distance p,
+    .explanation__stats .travel-time p {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* crew  */
+    .crew__main {
+        padding: var(--sp-500) var(--sp-500);
+    }
+
+    .crew__inner {
+        min-height: 110.4vw;
+        width: 100%;
+    }
+
+    .crew__title p {
+        font-size: 2rem;
+    }
+
+    .crew__content {
+        flex-direction: column;
+        min-height: 104.2vw;
+    }
+
+    .crew__explanation {
+        width: 66.6vw;
+    }
+
+    .crew__explanation .explanation {
+        gap: var(--sp-300);
+        padding-top: var(--sp-500);
+    }
+
+    .crew__explanation .explanation__inner {
+        height: 30vw;
+    }
+
+    .crew__explanation .rank-name {
+        width: 100%;
+    }
+
+    .crew__explanation .rank-name p {
+        width: 100%;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .crew__explanation .rank-name h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .crew__info {
+        text-align: center;
+        font-size: 1.6rem;
+        height: 100%;
+    }
+
+    .crew__explanation .explanation__pagination {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .crew__explanation .explanation__pagination .pagination {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: var(--sp-200);
+    }
+
+    .crew__explanation .explanation__pagination .pagination .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .crew__image {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .crew__image .image {
+        width: 58.2vw;
+    }
+
+    /* technology  */
+
+    .technology__main {
+        align-items: center;
+        padding: var(--sp-500) var(--sp-400);
+    }
+
+    .technology__inner {
+        min-height: 110.4vw;
+        height: 110.4vw;
+    }
+
+    .technology__title p {
+        font-size: 2rem;
+    }
+
+    .technology__content {
+        width: 89.5vw;
+        flex-direction: column;
+    }
+
+    .tec__image {
+        order: 1;
+        width: 100vw;
+        height: 54.8vw;
+        padding-top: var(--sp-800);
+    }
+
+    .tec__image .image {
+        max-height: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .tec__image .image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .technology__content .pag-expl {
+        order: 2;
+        flex-direction: column;
+        gap: var(--sp-500);
+        width: 100%;
+    }
+
+    .technology__content .pag-expl .pagination {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: var(--sp-200);
+        width: 66.6vw;
+    }
+
+    .technology__content .pag-expl .pagination .pag-circle {
+        width: 56px;
+        height: 56px;
+    }
+
+    .technology__content .pag-expl .pagination .pag-circle p {
+        font-size: 2.4rem;
+    }
+
+    .technology__content .pag-expl .explanation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--sp-200);
+        width: 66.6vw;
+    }
+
+    .technology__content .pag-expl .explanation .rank-name {
+        width: 100%;
+        align-items: center;
+    }
+
+    .technology__content .pag-expl .explanation .rank-name p {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .technology__content .pag-expl .explanation .rank-name h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .technology__content .pag-expl .explanation .description {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+}
