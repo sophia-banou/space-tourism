@@ -1,39 +1,40 @@
 ---
 const path = Astro.url.pathname;
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <nav class="explanation__nav">
   <a
-    href=`/space-tourism/${path.endsWith("/moon/") ? "#" : "/destinations/moon"}`
-    data-astro-prefetch
     class=`item ${path.endsWith("/moon/") ? "active" : ""}`
+    href=`${basePath}destinations/moon/`
+    data-astro-prefetch
   >
     <div class="tab">
       <p class="text-preset-8">MOON</p>
     </div>
   </a>
   <a
-    href=`/space-tourism/${path.endsWith("/mars/") ? "#" : "/destinations/mars"}`
-    data-astro-prefetch
     class=`item ${path.endsWith("/mars/") ? "active" : ""}`
+    href=`${basePath}destinations/mars/`
+    data-astro-prefetch
   >
     <div class="tab">
       <p class="text-preset-8">MARS</p>
     </div>
   </a>
   <a
-    href=`/space-tourism/${path.endsWith("/europa/") ? "#" : "/destinations/europa"}`
-    data-astro-prefetch
     class=`item ${path.endsWith("/europa/") ? "active" : ""}`
+    href=`${basePath}destinations/europa/`
+    data-astro-prefetch
   >
     <div class="tab">
       <p class="text-preset-8">EUROPA</p>
     </div>
   </a>
   <a
-    href=`/space-tourism/${path.endsWith("/titan/") ? "#" : "/destinations/titan"}`
-    data-astro-prefetch
     class=`item ${path.endsWith("/titan/") ? "active" : ""}`
+    href=`${basePath}destinations/titan/`
+    data-astro-prefetch
   >
     <div class="tab">
       <p class="text-preset-8">TITAN</p>

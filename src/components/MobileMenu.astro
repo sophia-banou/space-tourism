@@ -1,19 +1,21 @@
 ---
 const path = Astro.url.pathname;
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <div class="mobile-wrapper">
   <div class="mobile__nav">
     <div class="content">
       <div class="close" id="mobile-close">
-        <img src="/space-tourism/assets/shared/icon-close.svg" alt="Close" />
+        <img src={`${basePath}assets/shared/icon-close.svg`} alt="Close" />
       </div>
     </div>
   </div>
   <nav class="mobile__content">
     <a
-      href=`/space-tourism${path=="/space-tourism/" ? "#" : "/"}`
-      class=`item ${path=="/space-tourism/" ? "active" : ""}`
+      href=`${basePath}`
+      data-astro-prefetch
+      class=`item ${(path == basePath) ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">00</span>
@@ -21,8 +23,9 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${path.startsWith("/space-tourism/destinations") ? "#" : "/destinations/moon"}`
-      class=`item ${path.startsWith("/space-tourism/destinations") ? "active" : ""}`
+      href={`${basePath}${path.startsWith(`${basePath}destinations`) ? "#" : "destinations/moon"}`}
+      data-astro-prefetch
+      class={`item ${path.startsWith(`${basePath}destinations`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">01</span>
@@ -30,8 +33,9 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${path.startsWith("/space-tourism/crew") ? "#" : "/crew/commander"}`
-      class=`item ${path.startsWith("/space-tourism/crew") ? "active" : ""}`
+      href={`${basePath}${path.startsWith(`${basePath}crew`) ? "#" : "crew/commander"}`}
+      data-astro-prefetch
+      class={`item ${path.startsWith(`${basePath}crew`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">02</span>
@@ -39,8 +43,9 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${path.startsWith("/space-tourism/technology") ? "#" : "/technology/launch-vehicle"}`
-      class=`item ${path.startsWith("/space-tourism/technology") ? "active" : ""}`
+      href={`${basePath}${path.startsWith(`${basePath}technology`) ? "#" : "technology/launch-vehicle"}`}
+      data-astro-prefetch
+      class={`item ${path.startsWith(`${basePath}technology`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">03</span>
