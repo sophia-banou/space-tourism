@@ -1,30 +1,31 @@
 ---
 const path = Astro.url.pathname;
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <nav class="explanation__pagination">
   <div class="pagination">
     <a
       class=`dot ${path.endsWith("/commander/") ? "active" : ""}`
-      href=`/space-tourism/${path.endsWith("/commander/") ? "#" : "/crew/commander"}`
+      href=`/space-tourism/${path.endsWith("/commander/") ? "javascript:void(0);" : "/crew/commander"}`
       data-astro-prefetch
     >
     </a>
     <a
       class=`dot ${path.endsWith("/mission-specialist/") ? "active" : ""}`
-      href=`/space-tourism/${path.endsWith("/mission-specialist/") ? "#" : "/crew/mission-specialist"}`
+      href=`/space-tourism/${path.endsWith("/mission-specialist/") ? "javascript:void(0);" : "/crew/mission-specialist"}`
       data-astro-prefetch
     >
     </a>
     <a
       class=`dot ${path.endsWith("/pilot/") ? "active" : ""}`
-      href=`/space-tourism/${path.endsWith("/pilot/") ? "#" : "/crew/pilot"}`
+      href=`/space-tourism/${path.endsWith("/pilot/") ? "javascript:void(0);" : "/crew/pilot"}`
       data-astro-prefetch
     >
     </a>
     <a
       class=`dot ${path.endsWith("/flight-engineer/") ? "active" : ""}`
-      href=`/space-tourism/${path.endsWith("/flight-engineer/") ? "#" : "/crew/flight-engineer"}`
+      href=`/space-tourism/${path.endsWith("/flight-engineer/") ? "javascript:void(0);" : "/crew/flight-engineer"}`
       data-astro-prefetch
     >
     </a>
