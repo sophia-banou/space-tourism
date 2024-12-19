@@ -6,11 +6,7 @@ const basePath = import.meta.env.BASE_URL || "/";
 <header class="header">
   <div class="header__logo">
     <a href=`${basePath}${(path == basePath) ? "#" : ""}` data-astro-prefetch>
-      <img
-        class="image"
-        src={`${basePath}assets/shared/shared/logo.svg`}
-        alt="Logo"
-      />
+      <img class="image" src={`${basePath}assets/shared/logo.svg`} alt="Logo" />
     </a>
     <div class="line"></div>
   </div>
@@ -26,9 +22,9 @@ const basePath = import.meta.env.BASE_URL || "/";
       </div>
     </a>
     <a
-      href={`${basePath}${path.startsWith(`${basePath}/destinations`) ? "#" : "/destinations/moon"}`}
+      href={`${basePath}${path.startsWith(`${basePath}destinations`) ? "#" : "destinations/moon"}`}
       data-astro-prefetch
-      class={`item ${path.startsWith(`${basePath}/destinations`) ? "active" : ""}`}
+      class={`item ${path.startsWith(`${basePath}destinations`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">01</span>
@@ -36,9 +32,9 @@ const basePath = import.meta.env.BASE_URL || "/";
       </div>
     </a>
     <a
-      href={`${basePath}${path.startsWith(`${basePath}/crew`) ? "#" : "/crew/commander"}`}
+      href={`${basePath}${path.startsWith(`${basePath}crew`) ? "#" : "crew/commander"}`}
       data-astro-prefetch
-      class={`item ${path.startsWith(`${basePath}/crew`) ? "active" : ""}`}
+      class={`item ${path.startsWith(`${basePath}crew`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">02</span>
@@ -46,9 +42,9 @@ const basePath = import.meta.env.BASE_URL || "/";
       </div>
     </a>
     <a
-      href={`${basePath}${path.startsWith(`${basePath}/technology`) ? "#" : "/technology/launch-vehicle"}`}
+      href={`${basePath}${path.startsWith(`${basePath}technology`) ? "#" : "technology/launch-vehicle"}`}
       data-astro-prefetch
-      class={`item ${path.startsWith(`${basePath}/technology`) ? "active" : ""}`}
+      class={`item ${path.startsWith(`${basePath}technology`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">03</span>
