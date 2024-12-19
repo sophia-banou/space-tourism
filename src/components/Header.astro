@@ -5,7 +5,11 @@ const path = Astro.url.pathname;
 <header class="header">
   <div class="header__logo">
     <a href=`/space-tourism${(path == "/") ? "#" : "/"}` data-astro-prefetch>
-      <img class="image" src="/assets/shared/logo.svg" alt="Logo" />
+      <img
+        class="image"
+        src="/space-tourism/assets/shared/logo.svg"
+        alt="Logo"
+      />
     </a>
     <div class="line"></div>
   </div>
@@ -52,6 +56,9 @@ const path = Astro.url.pathname;
     </a>
   </nav>
   <div class="header__mobile">
-    <img src="/assets/shared/icon-hamburger.svg" alt="Hamburger Menu" />
+    <img
+      src="/space-tourism/assets/shared/icon-hamburger.svg"
+      alt="Hamburger Menu"
+    />
   </div>
 </header>
