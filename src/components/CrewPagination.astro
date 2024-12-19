@@ -5,26 +5,26 @@ const path = Astro.url.pathname;
 <nav class="explanation__pagination">
   <div class="pagination">
     <a
-      class=`dot ${path.endsWith("commander") ? "active" : ""}`
-      href=`/space-tourism/${path.endsWith("commander") ? "#" : "/crew/commander"}`
+      class=`dot ${path.endsWith("/commander/") ? "active" : ""}`
+      href=`/space-tourism/${path.endsWith("/commander/") ? "#" : "/crew/commander"}`
       data-astro-prefetch
     >
     </a>
     <a
-      class=`dot ${path.endsWith("mission-specialist") ? "active" : ""}`
-      href=`/space-tourism/${path.endsWith("mission-specialist") ? "#" : "/crew/mission-specialist"}`
+      class=`dot ${path.endsWith("/mission-specialist/") ? "active" : ""}`
+      href=`/space-tourism/${path.endsWith("/mission-specialist/") ? "#" : "/crew/mission-specialist"}`
       data-astro-prefetch
     >
     </a>
     <a
-      class=`dot ${path.endsWith("pilot") ? "active" : ""}`
-      href=`/space-tourism/${path.endsWith("pilot") ? "#" : "/crew/pilot"}`
+      class=`dot ${path.endsWith("/pilot/") ? "active" : ""}`
+      href=`/space-tourism/${path.endsWith("/pilot/") ? "#" : "/crew/pilot"}`
       data-astro-prefetch
     >
     </a>
     <a
-      class=`dot ${path.endsWith("flight-engineer") ? "active" : ""}`
-      href=`/space-tourism/${path.endsWith("flight-engineer") ? "#" : "/crew/flight-engineer"}`
+      class=`dot ${path.endsWith("/flight-engineer/") ? "active" : ""}`
+      href=`/space-tourism/${path.endsWith("/flight-engineer/") ? "#" : "/crew/flight-engineer"}`
       data-astro-prefetch
     >
     </a>

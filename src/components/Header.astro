@@ -4,7 +4,10 @@ const path = Astro.url.pathname;
 
 <header class="header">
   <div class="header__logo">
-    <a href=`/space-tourism${(path == "/") ? "#" : "/"}` data-astro-prefetch>
+    <a
+      href=`/space-tourism${(path == "/space-tourism/") ? "#" : "/"}`
+      data-astro-prefetch
+    >
       <img
         class="image"
         src="/space-tourism/assets/shared/logo.svg"
@@ -15,9 +18,9 @@ const path = Astro.url.pathname;
   </div>
   <nav class="header__nav">
     <a
-      href=`/space-tourism${(path == "/") ? "#" : "/"}`
+      href=`/space-tourism${(path == "/space-tourism/") ? "#" : "/"}`
       data-astro-prefetch
-      class=`item ${(path == "/") ? "active" : ""}`
+      class=`item ${(path == "/space-tourism/") ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">00</span>
@@ -25,9 +28,9 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${(path.startsWith("/destinations")) ? "#" : "/destinations/moon"}`
+      href=`/space-tourism/${(path.startsWith("/space-tourism/destinations")) ? "#" : "/destinations/moon"}`
       data-astro-prefetch
-      class=`item ${path.startsWith("/destinations") ? "active" : ""}`
+      class=`item ${path.startsWith("/space-tourism/destinations") ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">01</span>
@@ -35,9 +38,9 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${(path.startsWith("/crew")) ? "#" : "/crew/commander"}`
+      href=`/space-tourism/${(path.startsWith("/space-tourism/crew")) ? "#" : "/crew/commander"}`
       data-astro-prefetch
-      class=`item ${path.startsWith("/crew") ? "active" : ""}`
+      class=`item ${path.startsWith("/space-tourism/crew") ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">02</span>
@@ -45,9 +48,9 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${(path.startsWith("/technology")) ? "#" : "/technology/launch-vehicle"}`
+      href=`/space-tourism/${(path.startsWith("/space-tourism/technology")) ? "#" : "/technology/launch-vehicle"}`
       data-astro-prefetch
-      class=`item ${path.startsWith("/technology") ? "active" : ""}`
+      class=`item ${path.startsWith("/space-tourism/technology") ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">03</span>

@@ -12,8 +12,8 @@ const path = Astro.url.pathname;
   </div>
   <nav class="mobile__content">
     <a
-      href=`/space-tourism${path=="/" ? "#" : "/"}`
-      class=`item ${path=="/" ? "active" : ""}`
+      href=`/space-tourism${path=="/space-tourism/" ? "#" : "/"}`
+      class=`item ${path=="/space-tourism/" ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">00</span>
@@ -21,8 +21,8 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${path.startsWith("/destinations") ? "#" : "/destinations/moon"}`
-      class=`item ${path.startsWith("/destinations") ? "active" : ""}`
+      href=`/space-tourism/${path.startsWith("/space-tourism/destinations") ? "#" : "/destinations/moon"}`
+      class=`item ${path.startsWith("/space-tourism/destinations") ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">01</span>
@@ -30,8 +30,8 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${path.startsWith("/crew") ? "#" : "/crew/commander"}`
-      class=`item ${path.startsWith("/crew") ? "active" : ""}`
+      href=`/space-tourism/${path.startsWith("/space-tourism/crew") ? "#" : "/crew/commander"}`
+      class=`item ${path.startsWith("/space-tourism/crew") ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">02</span>
@@ -39,8 +39,8 @@ const path = Astro.url.pathname;
       </div>
     </a>
     <a
-      href=`/space-tourism/${path.startsWith("/technology") ? "#" : "/technology/launch-vehicle"}`
-      class=`item ${path.startsWith("/technology") ? "active" : ""}`
+      href=`/space-tourism/${path.startsWith("/space-tourism/technology") ? "#" : "/technology/launch-vehicle"}`
+      class=`item ${path.startsWith("/space-tourism/technology") ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">03</span>
