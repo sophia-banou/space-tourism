@@ -73,4 +73,9 @@ $(document).ready(function () {
       $("body").css("position", "static");
     },
   });
+  $(".active").on({
+    click: function (e) {
+      e.preventDefault();
+    },
+  });
 });
