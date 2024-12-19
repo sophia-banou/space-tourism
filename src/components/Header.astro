@@ -1,6 +1,6 @@
 ---
 const path = Astro.url.pathname;
-const basePath = import.meta.env.BASE_URL;
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <header class="header">
@@ -8,7 +8,7 @@ const basePath = import.meta.env.BASE_URL;
     <a href=`${basePath}${(path == basePath) ? "#" : ""}` data-astro-prefetch>
       <img
         class="image"
-        src="/space-tourism/assets/shared/logo.svg"
+        src={`${basePath}assets/shared/shared/logo.svg`}
         alt="Logo"
       />
     </a>
@@ -26,9 +26,9 @@ const basePath = import.meta.env.BASE_URL;
       </div>
     </a>
     <a
-      href=`/space-tourism/${(path.startsWith("/space-tourism/destinations")) ? "#" : "/destinations/moon"}`
+      href={`${basePath}${path.startsWith(`${basePath}/destinations`) ? "#" : "/destinations/moon"}`}
       data-astro-prefetch
-      class=`item ${path.startsWith("/space-tourism/destinations") ? "active" : ""}`
+      class={`item ${path.startsWith(`${basePath}/destinations`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">01</span>
@@ -36,9 +36,9 @@ const basePath = import.meta.env.BASE_URL;
       </div>
     </a>
     <a
-      href=`/space-tourism/${(path.startsWith("/space-tourism/crew")) ? "#" : "/crew/commander"}`
+      href={`${basePath}${path.startsWith(`${basePath}/crew`) ? "#" : "/crew/commander"}`}
       data-astro-prefetch
-      class=`item ${path.startsWith("/space-tourism/crew") ? "active" : ""}`
+      class={`item ${path.startsWith(`${basePath}/crew`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">02</span>
@@ -46,9 +46,9 @@ const basePath = import.meta.env.BASE_URL;
       </div>
     </a>
     <a
-      href=`/space-tourism/${(path.startsWith("/space-tourism/technology")) ? "#" : "/technology/launch-vehicle"}`
+      href={`${basePath}${path.startsWith(`${basePath}/technology`) ? "#" : "/technology/launch-vehicle"}`}
       data-astro-prefetch
-      class=`item ${path.startsWith("/space-tourism/technology") ? "active" : ""}`
+      class={`item ${path.startsWith(`${basePath}/technology`) ? "active" : ""}`}
     >
       <div class="text">
         <span class="text-preset-8-bold">03</span>
@@ -58,7 +58,7 @@ const basePath = import.meta.env.BASE_URL;
   </nav>
   <div class="header__mobile">
     <img
-      src="/space-tourism/assets/shared/icon-hamburger.svg"
+      src={`${basePath}assets/shared/icon-hamburger.svg`}
       alt="Hamburger Menu"
     />
   </div>
