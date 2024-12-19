@@ -4,7 +4,7 @@ const path = Astro.url.pathname;
 
 <nav class="explanation__nav">
   <a
-    href=`${path.endsWith("moon") ? "#" : "/destinations/moon"}`
+    href=`/space-tourism/${path.endsWith("moon") ? "#" : "/destinations/moon"}`
     data-astro-prefetch
     class=`item ${path.endsWith("moon") ? "active" : ""}`
   >
@@ -13,7 +13,7 @@ const path = Astro.url.pathname;
     </div>
   </a>
   <a
-    href=`${path.endsWith("mars") ? "#" : "/destinations/mars"}`
+    href=`/space-tourism/${path.endsWith("mars") ? "#" : "/destinations/mars"}`
     data-astro-prefetch
     class=`item ${path.endsWith("mars") ? "active" : ""}`
   >
@@ -22,7 +22,7 @@ const path = Astro.url.pathname;
     </div>
   </a>
   <a
-    href=`${path.endsWith("europa") ? "#" : "/destinations/europa"}`
+    href=`/space-tourism/${path.endsWith("europa") ? "#" : "/destinations/europa"}`
     data-astro-prefetch
     class=`item ${path.endsWith("europa") ? "active" : ""}`
   >
@@ -31,7 +31,7 @@ const path = Astro.url.pathname;
     </div>
   </a>
   <a
-    href=`${path.endsWith("titan") ? "#" : "/destinations/titan"}`
+    href=`/space-tourism/${path.endsWith("titan") ? "#" : "/destinations/titan"}`
     data-astro-prefetch
     class=`item ${path.endsWith("titan") ? "active" : ""}`
   >
