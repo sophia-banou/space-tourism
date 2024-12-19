@@ -1,13 +1,11 @@
 ---
 const path = Astro.url.pathname;
+const basePath = import.meta.env.BASE_URL;
 ---
 
 <header class="header">
   <div class="header__logo">
-    <a
-      href=`/space-tourism${(path == "/space-tourism/") ? "#" : "/"}`
-      data-astro-prefetch
-    >
+    <a href=`${basePath}${(path == basePath) ? "#" : ""}` data-astro-prefetch>
       <img
         class="image"
         src="/space-tourism/assets/shared/logo.svg"
@@ -18,9 +16,9 @@ const path = Astro.url.pathname;
   </div>
   <nav class="header__nav">
     <a
-      href=`/space-tourism${(path == "/space-tourism/") ? "#" : "/"}`
+      href=`${basePath}${(path == basePath) ? "#" : ""}`
       data-astro-prefetch
-      class=`item ${(path == "/space-tourism/") ? "active" : ""}`
+      class=`item ${(path == basePath) ? "active" : ""}`
     >
       <div class="text">
         <span class="text-preset-8-bold">00</span>
